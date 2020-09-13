@@ -1,37 +1,90 @@
-## Welcome to GitHub Pages
+# [CWTools: Paradox Language Services](https://marketplace.visualstudio.com/items/tboby.cwtools-vscode)
 
-You can use the [editor on GitHub](https://github.com/HerrX2000/cwtools/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+**Paradox Language Features for Visual Studio Code**
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Disclaimer
 
-### Markdown
+This extension is still in preview, it may not work, it may stop working at any time.
+**Make backups of your mod files.**
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Supported games
 
-```markdown
-Syntax highlighted code block
+* Stellaris
+* Hearts of Iron IV
+* Europa Universalis IV
+* Imperator: Rome - outdated, help needed
+* Crusader Kings II - partial
+* Crusader Kings III - in progress, help needed
 
-# Header 1
-## Header 2
-### Header 3
+## Features
 
-- Bulleted
-- List
+* Immediate highlighting of syntax errors
+* Autocomplete while you type, providing descriptions when available
+* Tooltips on hover showing:
+  * Related localisation
+  * Documentation for that element
+  * Scope context at that position
+* A wide range of validators for common, interface, and events, checking
+  * That required localisation keys are defined
+  * Existence of effects/triggers/modifiers
+  * Scope context for used effects/triggers/modifiers
+  * Usage of scripted effects/triggers
+  * Correct entries for weights/AI_chance/etc
+  * That event\_targets are saved before they're used
+  * That referenced sprites and graphics files exist
+  * and a number of other specific validators
+* "Code actions" to generate .yml for missing localisation
 
-1. Numbered
-2. List
+### Completion
 
-**Bold** and _Italic_ and `Code` text
+![Completion](./docs/completion.gif)
 
-[Link](url) and ![Image](src)
-```
+### Tooltips
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+![Tooltips](./docs/tooltips.gif)
 
-### Jekyll Themes
+### Scope tooltips
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/HerrX2000/cwtools/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+![Scope tooltips](./docs/scopetooltip.gif)
 
-### Support or Contact
+### Scope errors
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+![Scope ](./docs/scopeerror.gif)
+
+### Localisation error
+
+![Localisation error](./docs/localisationerror.gif)
+
+### Go to definition
+
+![Go to definition](./docs/gotodef.gif)
+
+### Find all references
+
+![Find all references](./docs/findallrefs.png)
+
+## Usage
+
+1. Install this extension
+2. If on linux, possibly follow [these instructions](https://code.visualstudio.com/docs/setup/linux#_error-enospc)
+3. If on linux, install libcurl3
+4. Either open your mod folder directly
+5. or open the Game folder containing your mods. E.g. for Stellaris this can be one of:
+    * "C:\Users\name\Paradox Interactive\Stellaris"
+    * "C:\Program Files(x86)\Steam\steamapps\common\Stellaris"
+
+    or on linux
+    * "/home/name/.local/share/Paradox Interactive/Stellars"
+    * "/home/name/.steam/steam/steamapps/common/Stellaris"
+6. Follow the prompts to select your vanilla folder
+7. Edit files and watch syntax errors show up when you make mistakes
+8. Wait up to a minute for the extension to scan all your mods and find all errors
+
+## Links
+* [vic2-config](https://github.com/cwtools/cwtools-vic2-config)
+* [ck2-config](https://github.com/cwtools/cwtools-ck2-config)
+* [eu4-config](https://github.com/cwtools/cwtools-eu4-config)
+* [hoi4-config](https://github.com/cwtools/cwtools-hoi4-config)
+* [stellaris-config](https://github.com/cwtools/cwtools-stellaris-config)
+* [ir-config](https://github.com/cwtools/cwtools-ir-config)
+* [ck3-config](https://github.com/cwtools/cwtools-ck3-config)
